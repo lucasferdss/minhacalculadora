@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_principal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="12dp"
+    tools:context=".MainActivity">
+
+    <!-- Campos de entrada: número 1, operador, número 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <EditText
+            android:id="@+id/campo_valor1"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="2"
+            android:hint="1º Número"
+            android:inputType="numberDecimal"
+            android:gravity="center"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/campo_operacao"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:hint="Op"
+            android:gravity="center"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/campo_valor2"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="2"
+            android:hint="2º Número"
+            android:inputType="numberDecimal"
+            android:gravity="center"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- Resultado -->
+    <TextView
+        android:id="@+id/resultado_texto"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="end|center_vertical"
+        android:textSize="24sp"
+        android:background="#B4B4B4"
+        android:textColor="#000000"
+        android:paddingEnd="12dp"
+        android:text="" />
+
+    <!-- Linha de botões: AC (limpar), dividir -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/botao_limpar"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="3"
+            android:text="AC" />
+
+        <Button
+            android:id="@+id/botao_dividir"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="/" />
+    </LinearLayout>
+
+    <!-- Linha de botões: 7 8 9 * -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/numero_sete"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/numero_oito"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/numero_nove"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/botao_multiplicar"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="*" />
+    </LinearLayout>
+
+    <!-- Linha de botões: 4 5 6 - -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/numero_quatro"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/numero_cinco"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/numero_seis"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/botao_subtrair"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="-" />
+    </LinearLayout>
+
+    <!-- Linha de botões: 1 2 3 + -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/numero_um"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/numero_dois"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/numero_tres"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/botao_somar"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="+" />
+    </LinearLayout>
+
+    <!-- Linha final: 0 . = apagar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/numero_zero"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/numero_ponto"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="." />
+
+        <Button
+            android:id="@+id/botao_igual"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="=" />
+    </LinearLayout>
+</LinearLayout>
